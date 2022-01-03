@@ -38,8 +38,8 @@ Start by using yarn start in your windows shell.
 * Romain Dupont - Developpeur Front & Back (https://github.com/romaindupont) [myWebsite](https://www.romaindupont.me/)
 
 ## Some Screen Print
-![visuel]()
-![visuel]()
+![visuel](https://github.com/romaindupont/ProjetMagasinDatamatrix/blob/master/assets/start.png)
+![visuel](https://github.com/romaindupont/ProjetMagasinDatamatrix/blob/master/assets/PalettMode.png)
 
 ## License
 
