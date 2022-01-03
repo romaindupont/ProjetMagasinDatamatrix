@@ -7,7 +7,7 @@ Le but de ce projet est de lire des datamatrix et de les déposer dans un fichie
 
 ### Requirements
 
-You must have this dependencies to start the project : 
+You must have this dependencies to start the project :
 
 - Node > 10.x version
 - Yarn >= 1.21.3 version
@@ -15,11 +15,13 @@ You must have this dependencies to start the project :
 ### Installation
 
 ### I. `LogicielPalettisationV1.0-2022.exe`
+
 You just need to use the LogicielPalettisationV1.0-2022.exe for start the application.
 
 If you want use the application in local use command below :
 
 ### 1. `yarn`
+
 Install the project dependencies
 
 ### 2. `yarn start`
@@ -35,11 +37,12 @@ Start by using yarn start in your windows shell.
 
 ## Authors
 
-* Romain Dupont - Developpeur Front & Back (https://github.com/romaindupont) [myWebsite](https://www.romaindupont.me/)
+- Romain Dupont - Developpeur Front & Back (https://github.com/romaindupont) [myWebsite](https://www.romaindupont.me/)
 
 ## Some Screen Print
-![visuel]()
-![visuel]()
+
+![visuel](https://github.com/romaindupont/ProjetMagasinDatamatrix/blob/paletmode/assets/start.png)
+![visuel](https://github.com/romaindupont/ProjetMagasinDatamatrix/blob/paletmode/assets/PalettMode.png)
 
 ## License
 
