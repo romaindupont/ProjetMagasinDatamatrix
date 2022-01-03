@@ -1,6 +1,7 @@
 import { MemoryRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import FlashMode from 'components/FlashMode';
+import PaletMode from 'components/PaletMode';
 import FlashLogo from '../../assets/flashLogo.png';
 import PaletLogo from '../../assets/palet.png';
 
@@ -28,9 +29,8 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={Hello} />
         <Route path="/flashingMode" component={FlashMode} />
-        <Route path="/paletFlash" component={Hello} />
+        <Route path="/paletFlash" component={PaletMode} />
       </Switch>
     </Router>
   );
 }
-
