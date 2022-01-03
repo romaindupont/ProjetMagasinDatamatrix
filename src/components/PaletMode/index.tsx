@@ -6,6 +6,7 @@
 import { useState, useEffect } from 'react';
 import { DateTime } from 'luxon';
 import XLSX from 'xlsx';
+import { Link } from 'react-router-dom';
 import Go from '../../../assets/go.png';
 import Stop from '../../../assets/stop.png';
 
@@ -39,7 +40,6 @@ const PaletMode = () => {
     const forExcel = csvToExcel.split("\n").map((row: string) => {
       return row.split(/;|,/);
     });
-    /* forExcel.sort() */
     function compareSecondColumn(a: any, b: any) {
       if (a[2] === b[2]) {
           return 0;
@@ -51,14 +51,10 @@ const PaletMode = () => {
     forExcel.sort(compareSecondColumn)
     const ws = XLSX.utils.json_to_sheet(forExcel, {skipHeader:true});
 		const wb = XLSX.utils.book_new();
-    /* ws['!autofilter'] = { ref:"C1" } */
-   /*  ws['!sort'] = {s:{c:0, r:2}, e:{c:1, r:6}} */
     ws['!autosort'] = { ref:"C2:C100" }
 
 		XLSX.utils.book_append_sheet(wb, ws, `${PaletNumber}`);
-		/* generate XLSX file and send to client */
 		XLSX.writeFile(wb, `${PaletNumber}.xlsx`)
-    /* console.log(first_worksheet) */
     resetArray();
   };
   useEffect(() => {
@@ -72,6 +68,9 @@ const PaletMode = () => {
   }, [input]);
   return (
     <div className="paletMode">
+      <Link to="/" rel="noreferrer" className="backMenu">
+          <p>Menu</p>
+        </Link>
       <label htmlFor="datamatrix">Code Barre</label>
       <input
         id="inputField"
