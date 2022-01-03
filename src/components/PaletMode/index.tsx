@@ -1,3 +1,5 @@
+/* eslint-disable no-else-return */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable prefer-template */
 /* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -33,30 +35,25 @@ const PaletMode = () => {
   const sauvegarde = async () => {
     setCount(count + 1);
     await paletNumberFx();
- /*    const csvContent =
-      'data:text/csv;charset=utf-8,' + PaletArray.join("\n").replaceAll('/', ';'); */
     const csvToExcel = PaletArray.join("\n").replaceAll('/', ';');
     const forExcel = csvToExcel.split("\n").map((row: string) => {
       return row.split(/;|,/);
     });
-    forExcel.sort()
-    console.log(forExcel)
-    /* forExcel.sort((a,b)=> {
-      return a[0] - b[1];
-    }) */
-/*     const encodedUri = encodeURI(csvContent);
-    const link = document.createElement('a');
-    link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `${PaletNumber}.csv`);
-    document.body.appendChild(link);
-    link.click(); */
-
-    const myHeader = ["id","name","location"];
-    const ws = XLSX.utils.json_to_sheet(forExcel);
+    /* forExcel.sort() */
+    function compareSecondColumn(a: any, b: any) {
+      if (a[2] === b[2]) {
+          return 0;
+      }
+      else {
+          return (a[2] < b[2]) ? -1 : 1;
+      }
+    }
+    forExcel.sort(compareSecondColumn)
+    const ws = XLSX.utils.json_to_sheet(forExcel, {skipHeader:true});
 		const wb = XLSX.utils.book_new();
-    ws['!autofilter'] = { ref:"C1" }
+    /* ws['!autofilter'] = { ref:"C1" } */
    /*  ws['!sort'] = {s:{c:0, r:2}, e:{c:1, r:6}} */
-    /* ws['!sort'] = { ref:"C2:C6" } */
+    ws['!autosort'] = { ref:"C2:C100" }
 
 		XLSX.utils.book_append_sheet(wb, ws, `${PaletNumber}`);
 		/* generate XLSX file and send to client */
