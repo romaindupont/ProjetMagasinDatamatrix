@@ -41,8 +41,8 @@ Start by using yarn start in your windows shell.
 
 ## Some Screen Print
 
-![visuel](https://github.com/romaindupont/ProjetMagasinDatamatrix/blob/paletmode/assets/start.png)
-![visuel](https://github.com/romaindupont/ProjetMagasinDatamatrix/blob/paletmode/assets/PalettMode.png)
+![visuel](https://github.com/romaindupont/ProjetMagasinDatamatrix/blob/master/assets/start.png)
+![visuel](https://github.com/romaindupont/ProjetMagasinDatamatrix/blob/master/assets/PalettMode.png)
 
 ## License
 
