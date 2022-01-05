@@ -9,11 +9,12 @@ const FlashMode = () => {
   const [src, setImageSrc] = useState('');
   const [ref, setInputRef] = useState('');
   const [manitouRef, setManitouRef] = useState('');
+  const [word, setWord] = useState('');
   const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };
   const clicButton = () => {
-    LabelPdf(src, ref, manitouRef);
+    LabelPdf(src, ref, manitouRef, word);
   };
   useEffect(() => {
     const canvas = document.createElement('canvas');
@@ -28,6 +29,7 @@ const FlashMode = () => {
     setInputRef(input.substring(26, 34));
     setManitouRef(input.substring(17, 25));
     setImageSrc(canvas.toDataURL('image/png'));
+    setWord(input);
   }, [input, src]);
   return (
     <div className="flashMode">
@@ -46,9 +48,9 @@ const FlashMode = () => {
       {input === 'exemple' ? (
         <div>A venir</div>
       ) : (
-        <img src={src} onLoad={clicButton} alt={`data matrix from ${input}`} />
+        <img src={src} /* onLoad={clicButton}  */alt={`data matrix from ${input}`} />
       )}
-      {/* <a href="" style="display: none">Scarica Dati</a> */}
+      <button className="buttonSave" onClick={clicButton}>Sauvegarder</button>
     </div>
   );
 };
