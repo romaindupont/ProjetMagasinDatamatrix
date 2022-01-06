@@ -1,20 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import LabelPdf from './LabelPdf';
+import LabelSimplePdf from './LabelSimplePdf';
 
 const bwipjs = require('bwip-js');
 
-const FlashMode = () => {
+const FlashLabel = () => {
   const [input, setInput] = useState('exemple');
   const [src, setImageSrc] = useState('');
-  const [ref, setInputRef] = useState('');
-  const [manitouRef, setManitouRef] = useState('');
   const [word, setWord] = useState('');
   const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };
   const clicButton = () => {
-    LabelPdf(src, ref, manitouRef, word);
+    LabelSimplePdf(src, word);
   };
   useEffect(() => {
     const canvas = document.createElement('canvas');
@@ -26,8 +24,6 @@ const FlashMode = () => {
       includetext: true,
       textxalign: 'center',
     });
-    setInputRef(input.substring(26, 34));
-    setManitouRef(input.substring(17, 25));
     setImageSrc(canvas.toDataURL('image/png'));
     setWord(input);
   }, [input, src]);
@@ -48,10 +44,10 @@ const FlashMode = () => {
       {input === 'exemple' ? (
         <div>A venir</div>
       ) : (
-        <img src={src} onLoad={clicButton} alt={`data matrix from ${input}`} />
+        <img src={src} alt={`data matrix from ${input}`} />
       )}
+      <button className="buttonSave" onClick={clicButton}>Sauvegarder</button>
     </div>
   );
 };
-
-export default FlashMode;
+export default FlashLabel;
