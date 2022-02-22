@@ -1,0 +1,80 @@
+.datePicker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > label {
+    margin-bottom: 1rem;
+  }
+}
+.tableauLivraison {
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.checked {
+  background-color: #a1cae2 !important;
+}
+.notChecked {
+  background-color: #fff;
+}
+
+tr:hover td {
+  background-color: #265d7d;
+}
+
+.flash {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: #435443;
+  width: 80px;
+  height: 30px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  &:hover {
+    border: 3px solid #4c767c;
+    border-radius: 5px;
+    background-color: #FFF;
+    & > p {
+      color: #4c767c;
+    }
+  }
+}
+
+.flash > p{
+  color: #FFF;
+  font-style: normal;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.refToFind {
+  color: #000;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.refToFind--input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.refToFind-counter {
+  width: 25px;
+  height: 25px;
+}
+.refToFind-input {
+  width: 400px;
+  margin-right: 3rem;
+}
+.validation {
+  display: none;
+  background-color: rgb(7, 67, 156) !important;
+  &:hover {
+    background-color: #fff !important;
+    border: 3px solid #07439c !important;
+    color: rgb(7, 67, 156) !important;
+  }
+}

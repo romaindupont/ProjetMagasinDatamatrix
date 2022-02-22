@@ -1,0 +1,87 @@
+.importCde {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  &-title {
+    color: #000;
+    text-align: center;
+    font-size: 0.8rem;
+
+  }
+  &-chargement {
+    width: 100vw;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.chargement--title {
+  color: #000;
+  margin-right: 0.5rem;
+}
+.removeButton {
+  background: rgb(224, 31, 40) !important;
+  &:hover {
+    background: #fff !important;
+    border: 3px solid rgb(224, 31, 40) !important;
+  }
+}
+.chargement--button {
+  background: rgb(67, 84, 67);
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+
+}
+.chargement--input {
+  opacity: 0;
+}
+.preview {
+  color: rgb(49, 48, 48);
+  font-size: 0.5rem;
+}
+table {
+  color: #000;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+}
+thead {
+  background-color: #36304a;
+  color: #fff;
+}
+tr {
+  text-align: center;
+}
+tbody tr:nth-child(even) {
+  background-color:#f5f5f5;
+}
+tbody {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 37vh;
+}
+.notGood {
+  background-color: red;
+  width: 25%;
+  text-align: center;
+}
+
+.good {
+  background-color: green;
+  width: 25%;
+  text-align: center;
+}
+.import, .test, .flash {
+  display: none;
+}
+
+.tableau {
+  width: 100%;
+  height: 60vh;
+  overflow: auto;
+}

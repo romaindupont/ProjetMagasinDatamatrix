@@ -4,9 +4,9 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState, useEffect } from 'react';
+import BackToMenu from '../BackToMenu';
 import { DateTime } from 'luxon';
 import XLSX from 'xlsx';
-import { Link } from 'react-router-dom';
 import Go from '../../../assets/go.png';
 import Stop from '../../../assets/stop.png';
 
@@ -33,9 +33,9 @@ const PaletMode = () => {
   const resetArray = () => {
     setPaletArray([]);
   };
-  const sauvegarde = async () => {
+  const sauvegarde = () => {
     setCount(count + 1);
-    await paletNumberFx();
+    paletNumberFx();
     const csvToExcel = PaletArray.join("\n").replaceAll('/', ';');
     const forExcel = csvToExcel.split("\n").map((row: string) => {
       return row.split(/;|,/);
@@ -60,7 +60,7 @@ const PaletMode = () => {
   useEffect(() => {
     const delayArray = setTimeout(() => {
       setPaletArray(array => [...array, input]);
-      document.getElementById('inputField').select();
+      document.getElementById('inputField')!.select();
       setImage(false);
     }, 1000);
     setImage(true);
@@ -68,9 +68,7 @@ const PaletMode = () => {
   }, [input]);
   return (
     <div className="paletMode">
-      <Link to="/" rel="noreferrer" className="backMenu">
-          <p>Menu</p>
-        </Link>
+      <BackToMenu to="/flash"/>
       <label htmlFor="datamatrix">Code Barre</label>
       <input
         id="inputField"

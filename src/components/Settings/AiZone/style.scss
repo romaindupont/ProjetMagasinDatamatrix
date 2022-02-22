@@ -1,0 +1,81 @@
+.tableauAI {
+  margin: 2rem;
+  width: 90%;
+  height: 100%;
+  overflow: auto;
+  &-header {
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: center;
+    & > input {
+      width: 250px;
+    }
+  }
+}
+.filterZone {
+  color: #000;
+  position: relative;
+  width: 15%;
+  &-button {
+    display: flex;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    height: 25px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    & > img {
+      width: 25px;
+    }
+    &:hover {
+      background-color: #4c767c;
+    }
+  }
+}
+.filtre {
+  background-color: #4c767c;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px 5px #000;
+  & > span {
+    display: block;
+    font-weight: 900;
+    margin : 0.5rem 0;
+    text-align: center;
+  }
+}
+
+.filtre-choice {
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  align-items: flex-start;
+  & > label {
+    font-size: 0.7rem;
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: row-reverse;
+    & > input {
+      margin: 0 0.5rem;
+    }
+  }
+}
+.filtreValidation {
+  background-color: rgb(7, 67, 156) !important;
+  margin: 0.4rem auto;
+  &:hover {
+    background-color: #fff !important;
+    border: 3px solid #07439c !important;
+    color: rgb(7, 67, 156) !important;
+  }
+}
+.buttonZone {
+  display: flex;
+  width: 45%;
+}

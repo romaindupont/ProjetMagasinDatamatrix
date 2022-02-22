@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import BackToMenu from 'components/BackToMenu';
 import LabelSimplePdf from './LabelSimplePdf';
 
 const bwipjs = require('bwip-js');
@@ -29,9 +29,7 @@ const FlashLabel = () => {
   }, [input, src]);
   return (
     <div className="flashMode">
-      <Link to="/" rel="noreferrer" className="backMenu">
-        <p>Menu</p>
-      </Link>
+      <BackToMenu to="/flash" />
       <input
         id="inputField"
         type="text"
@@ -46,7 +44,9 @@ const FlashLabel = () => {
       ) : (
         <img src={src} alt={`data matrix from ${input}`} />
       )}
-      <button className="buttonSave" onClick={clicButton}>Sauvegarder</button>
+      <button className="buttonSave" type="button" onClick={clicButton}>
+        Sauvegarder
+      </button>
     </div>
   );
 };

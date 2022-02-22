@@ -1,0 +1,19 @@
+.order-input {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.tableauOrder {
+  margin: 2rem;
+  width: 90%;
+  height: 50%;
+}
+
+.selectInput {
+  border-bottom: 4px solid #4c767c;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import BackToMenu from '../BackToMenu';
 import LabelPdf from './LabelPdf';
 
 const bwipjs = require('bwip-js');
@@ -33,9 +33,7 @@ const FlashMode = () => {
   }, [input, src]);
   return (
     <div className="flashMode">
-      <Link to="/" rel="noreferrer" className="backMenu">
-        <p>Menu</p>
-      </Link>
+      <BackToMenu to="/flash" />
       <input
         id="inputField"
         type="text"
