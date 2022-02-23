@@ -10,7 +10,9 @@ const Table: React.FC<TableProps> = ({ listDelivery, saveIdDelivery }) => {
   return (
     <table>
       <Thead />
-      <Tbody listDelivery={listDelivery} saveIdDelivery={saveIdDelivery} />
+      <Tbody listDelivery={listDelivery} saveIdDelivery={saveIdDelivery} onChange={function (): void {
+        throw new Error('Function not implemented.');
+      } } />
     </table>
   );
 };

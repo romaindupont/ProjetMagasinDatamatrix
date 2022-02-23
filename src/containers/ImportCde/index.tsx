@@ -2,12 +2,12 @@ import { connect } from 'react-redux';
 import ImportCde from '../../components/ImportCde';
 import { importCommande, removeOrder, verifyCode, importBdd } from '../../actions/commande';
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state: any) => ({
   listCommande: state.commande.listCommande,
   cssStyle: state.commande.listStyle
 });
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = (dispatch: any) => ({
   importCommande: (ordersPath: string) => {
     dispatch(importCommande(ordersPath));
   },

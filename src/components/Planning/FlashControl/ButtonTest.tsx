@@ -5,6 +5,8 @@ import { notification } from '../../../utils/notification';
 interface ButtonTestProps {
   quantity: number;
   flashList: string[];
+  AiList: NodeList[];
+  arrayTest: NodeList[];
 }
 
 const ButtonTest: React.FC<ButtonTestProps> = ({ quantity, flashList }) => {

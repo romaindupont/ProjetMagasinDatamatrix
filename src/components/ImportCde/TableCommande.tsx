@@ -5,17 +5,15 @@ import Thead from './Thead';
 import Tbody from './Tbody';
 
 interface TableCommandeProps {
-  cssStyle: any[];
-  listCommande: string[];
+  listCommande: any[];
   onClick: (e: React.SyntheticEvent) => void;
 }
 
 const TableCommande: React.FC<TableCommandeProps> = ({
   listCommande,
-  cssStyle,
 }) => {
   const deleteFirstRow = () => {
-    document.getElementById('ordersTable')!.deleteRow(0);
+    (document.getElementById('ordersTable') as HTMLTableElement)!.deleteRow(0);
     document.querySelector<HTMLElement>('.refresh')!.style.display = 'none';
     document.querySelector<HTMLElement>('.test')!.style.display = 'block';
   };
@@ -26,7 +24,7 @@ const TableCommande: React.FC<TableCommandeProps> = ({
           <Thead listCommande={listCommande} />
           <tbody id="ordersTable">
             {listCommande.map((list, i) =>
-              <Tbody key={i} listCommande={list} cssStyle={cssStyle}/>
+              <Tbody key={i} listCommande={list}/>
             )}
           </tbody>
         </table>

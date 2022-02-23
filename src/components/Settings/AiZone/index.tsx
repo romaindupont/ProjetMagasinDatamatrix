@@ -22,7 +22,9 @@ const AiZone: React.FC<AiZoneProps> = ({ dbAiList }) => {
   }, [dbAiList]);
   return (
     <div>
-      <BackToMenu to="/settings" />
+      <BackToMenu to="/settings" onClick={function (): void {
+        throw new Error('Function not implemented.');
+      } }/>
       <div className="moq">
         <p>Zone AI</p>
         <div className="tableauAI">

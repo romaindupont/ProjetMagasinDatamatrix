@@ -33,7 +33,9 @@ const FlashMode = () => {
   }, [input, src]);
   return (
     <div className="flashMode">
-      <BackToMenu to="/flash" />
+      <BackToMenu to="/flash" onClick={function (): void {
+        throw new Error('Function not implemented.');
+      } }/>
       <input
         id="inputField"
         type="text"

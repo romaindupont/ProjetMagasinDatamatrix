@@ -27,7 +27,6 @@ const AddForm: React.FC<AddFormProps> = ({
       counter1: { value: string };
       counter2: { value: string };
     };
-    console.log(target.code.value)
     if (flashList.length === parseInt(target.counter2.value)) {
       notification('Vous avez inséré suffisament de référence');
     } else {

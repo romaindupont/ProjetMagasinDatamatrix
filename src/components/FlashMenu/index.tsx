@@ -6,7 +6,9 @@ import PaletLogo from '../../../assets/palet.png';
 const FlashMenu = () => {
   return (
     <div>
-      <BackToMenu to="/" />
+      <BackToMenu to="/" onClick={function (): void {
+        throw new Error('Function not implemented.');
+      } }/>
       <div className="Hello">
         <Link to="/flashingMode" rel="noreferrer" className="lien">
           <img src={FlashLogo} alt="Logo flashage colis" />

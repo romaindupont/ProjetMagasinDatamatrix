@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 interface BackToMenuProps {
   to: string;
+  onClick: () => void;
 }
 
 const BackToMenu: React.FC<BackToMenuProps> = ({ to }) => {

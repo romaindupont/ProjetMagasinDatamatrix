@@ -23,7 +23,9 @@ const Orders: React.FC<OrdersProps> = ({ ordersList }) => {
   }, [ordersList]);
   return (
     <div>
-      <BackToMenu to="/settings" />
+      <BackToMenu to="/settings" onClick={function (): void {
+        throw new Error('Function not implemented.');
+      } }/>
       <div className="moq">
         <p>Commandes Manitou</p>
         <div className="tableauOrder">

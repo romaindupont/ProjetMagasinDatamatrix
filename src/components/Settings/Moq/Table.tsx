@@ -10,7 +10,9 @@ const Table: React.FC<TableProps> = ({ moqList, saveSelectCase }) => {
   return (
     <table>
       <Thead />
-      <Tbody moqList={moqList} saveSelectCase={saveSelectCase} />
+      <Tbody moqList={moqList} saveSelectCase={saveSelectCase} id={''} id_ref={''} onChange={function (): void {
+        throw new Error('Function not implemented.');
+      } } />
     </table>
   );
 };

@@ -11,7 +11,7 @@ import { notification } from '../../utils/notification';
 import './style.scss';
 
 interface ImportCdeProps {
-  importCommande: (lien: string) => void;
+  importCommande: (ordersPath: string) => void;
   listCommande: any[];
   verifyCode: (reference: string) => void;
   importBdd: (
@@ -23,7 +23,6 @@ interface ImportCdeProps {
   cssStyle: string[];
   onClick: (e: React.SyntheticEvent) => void;
   file: OrdersList[];
-  orders: OrdersList[];
 }
 
 interface OrdersList {
@@ -82,7 +81,9 @@ const ImportCde: React.FC<ImportCdeProps> = ({ importCommande, listCommande, ver
   };
   return (
     <div className="importCde">
-      <BackToMenu to="/"/>
+      <BackToMenu to="/" onClick={function (): void {
+        throw new Error('Function not implemented.');
+      } }/>
       <h2 className="importCde-title">Importation des commandes</h2>
       <form className="importCde-chargement">
         <p className="chargement--title">

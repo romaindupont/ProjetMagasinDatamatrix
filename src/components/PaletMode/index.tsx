@@ -59,8 +59,8 @@ const PaletMode = () => {
   };
   useEffect(() => {
     const delayArray = setTimeout(() => {
-      setPaletArray(array => [...array, input]);
-      document.getElementById('inputField')!.select();
+      setPaletArray(array => [...array, input] as any);
+      (document.getElementById('inputField') as HTMLInputElement)!.select();
       setImage(false);
     }, 1000);
     setImage(true);
@@ -68,7 +68,9 @@ const PaletMode = () => {
   }, [input]);
   return (
     <div className="paletMode">
-      <BackToMenu to="/flash"/>
+      <BackToMenu to="/flash" onClick={function (): void {
+        throw new Error('Function not implemented.');
+      } }/>
       <label htmlFor="datamatrix">Code Barre</label>
       <input
         id="inputField"

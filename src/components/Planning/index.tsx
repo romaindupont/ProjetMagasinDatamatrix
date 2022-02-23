@@ -26,7 +26,9 @@ const Planning: React.FC<PlanningProps> = ({
   };
   return (
     <div className="importCde">
-      <BackToMenu to="/" />
+      <BackToMenu to="/" onClick={function (): void {
+        throw new Error('Function not implemented.');
+      } }/>
       <div className="datePicker">
         <label htmlFor="deliveryDate">Date Livraison à afficher :</label>
         <input

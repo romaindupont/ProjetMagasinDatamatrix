@@ -8,7 +8,7 @@ interface TbodyProps {
   ) => void;
   id: number | string;
   id_ref: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: () => void;
 }
 
 const Tbody: React.FC<TbodyProps> = ({ moqList, saveSelectCase }) => {

@@ -5,7 +5,9 @@ import './style.scss';
 const Settings = () => {
   return (
     <div>
-      <BackToMenu to="/" />
+      <BackToMenu to="/" onClick={function (): void {
+        throw new Error('Function not implemented.');
+      } }/>
       <div>Settings Menu</div>
       <div className="settings">
         <Link to="/moqChange" rel="noreferrer" className="lien">
